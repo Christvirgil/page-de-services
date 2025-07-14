@@ -15,20 +15,19 @@ const geistMono = Geist_Mono({
 });
 
 // ===================================================================
-//  OPTIMISATION SEO
+//  CONFIGURATION FINALE AVEC SEO ET VALIDATION GOOGLE
 // ===================================================================
 export const metadata: Metadata = {
-  // Le titre qui apparaît dans Google et l'onglet du navigateur
   title: "Allogic.dev | Backend & DevOps pour Prototypes IA (Vercel, GitHub)",
-
-  // La description qui apparaît sous le titre dans Google
   description: "Service expert pour transformer vos designs IA en applications robustes et scalables. Gestion de backend, base de données et déploiement.",
-  
-  // Mots-clés pour aider Google à comprendre votre activité
   keywords: ["backend", "devops", "vercel", "github", "ia", "prototype", "next.js", "database", "api", "freelance"],
+  
+  // C'EST ICI QUE VOTRE CLÉ A ÉTÉ AJOUTÉE
+  verification: {
+    google: "khOawTIVbSaj0tZbSQW5Q-QcBTHB2nQBq8cIvoTXrWE",
+  },
 };
 // ===================================================================
-
 
 export default function RootLayout({
   children,
