@@ -151,8 +151,12 @@ export default function HomePage() {
 
         <section id="contact" className="py-20 bg-gray-950/50">
           <div className="max-w-4xl mx-auto px-4 text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">Votre prototype IA mérite un backend professionnel</h2>
-            <p className="text-gray-300 mb-6 text-lg">Ne laissez pas les limites techniques gâcher votre vision</p>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              Votre prototype IA mérite un backend professionnel
+            </h2>
+            <p className="text-gray-300 mb-6 text-lg">
+              Ne laissez pas les limites techniques gâcher votre vision
+            </p>
             <p className="max-w-2xl mx-auto text-cyan-400 italic mb-10">
               "Après l'intervention d'Allogic, notre app générée par IA a tenu la charge du Black Friday"
               <span className="block mt-2 text-white not-italic">- Startup E-commerce</span>
