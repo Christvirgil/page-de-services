@@ -2,7 +2,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import WhatsAppButton from "@/components/WhatsAppButton"; // <-- 1. Import du bouton
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,10 +14,21 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// ===================================================================
+//  OPTIMISATION SEO
+// ===================================================================
 export const metadata: Metadata = {
-  title: "AILogic.dev | Votre Backend sur-mesure", // Titre amélioré
-  description: "Service de développement backend pour transformer vos designs IA en applications réelles.",
+  // Le titre qui apparaît dans Google et l'onglet du navigateur
+  title: "Allogic.dev | Backend & DevOps pour Prototypes IA (Vercel, GitHub)",
+
+  // La description qui apparaît sous le titre dans Google
+  description: "Service expert pour transformer vos designs IA en applications robustes et scalables. Gestion de backend, base de données et déploiement.",
+  
+  // Mots-clés pour aider Google à comprendre votre activité
+  keywords: ["backend", "devops", "vercel", "github", "ia", "prototype", "next.js", "database", "api", "freelance"],
 };
+// ===================================================================
+
 
 export default function RootLayout({
   children,
@@ -25,12 +36,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr"> {/* Changé en 'fr' pour le français */}
+    <html lang="fr">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
-        <WhatsAppButton /> {/* <-- 2. Ajout du bouton ici */}
+        <WhatsAppButton />
       </body>
     </html>
   );
