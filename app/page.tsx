@@ -48,7 +48,6 @@ export default function HomePage() {
             </p>
             
             <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {/* Service 1 - Optimisé pour la croissance */}
               <div className="bg-gray-800/50 p-8 rounded-xl border border-gray-700 hover:border-cyan-500 hover:-translate-y-2 transition-all duration-300">
                 <Icon path="M13 10V3L4 14h7v7l9-11h-7z" />
                 <h3 className="text-xl font-bold mb-2">Backend Scalable</h3>
@@ -57,8 +56,6 @@ export default function HomePage() {
                   des milliers d'utilisateurs simultanés
                 </p>
               </div>
-              
-              {/* Service 2 - Sécurité renforcée */}
               <div className="bg-gray-800/50 p-8 rounded-xl border border-gray-700 hover:border-cyan-500 hover:-translate-y-2 transition-all duration-300">
                 <Icon path="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                 <h3 className="text-xl font-bold mb-2">Sécurité Industrielle</h3>
@@ -67,8 +64,6 @@ export default function HomePage() {
                   (injections, fuites de données)
                 </p>
               </div>
-              
-              {/* Service 3 - Intégrations complexes */}
               <div className="bg-gray-800/50 p-8 rounded-xl border border-gray-700 hover:border-cyan-500 hover:-translate-y-2 transition-all duration-300">
                 <Icon path="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
                 <h3 className="text-xl font-bold mb-2">Intégrations Métier</h3>
@@ -77,8 +72,6 @@ export default function HomePage() {
                   ne savent pas gérer
                 </p>
               </div>
-              
-              {/* Service 4 - Maintenance */}
               <div className="bg-gray-800/50 p-8 rounded-xl border border-gray-700 hover:border-cyan-500 hover:-translate-y-2 transition-all duration-300">
                 <Icon path="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                 <h3 className="text-xl font-bold mb-2">Maintenance Proactive</h3>
@@ -91,34 +84,16 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Section Processus - Corrigée et améliorée */}
         <section id="processus" className="py-20">
           <div className="max-w-5xl mx-auto px-4">
             <h2 className="text-base font-semibold text-cyan-400 tracking-wider uppercase text-center">Votre Chemin Vers le Succès</h2>
             <p className="mt-2 text-3xl sm:text-4xl font-bold text-center">De l'ébauche IA à l'application professionnelle</p>
-            
             <div className="mt-16 space-y-16">
               {[
-                {
-                  number: "01",
-                  title: "Audit & Stratégie",
-                  text: "Nous analysons votre prototype IA pour identifier les faiblesses techniques et établissons un plan de transformation sur-mesure.",
-                },
-                {
-                  number: "02",
-                  title: "Reconstruction Ciblée",
-                  text: "Je reconstruis les parties critiques du backend en conservant ce qui fonctionne. Vous suivez l'avancement en temps réel.",
-                },
-                {
-                  number: "03",
-                  title: "Tests Industriels",
-                  text: "Stress test de l'application et correction des vulnérabilités pour une résistance optimale en conditions réelles.",
-                },
-                {
-                  number: "04",
-                  title: "Lancement & Suivi",
-                  text: "Livraison de votre application renforcée avec option de monitoring continu et maintenance évolutive.",
-                },
+                { number: "01", title: "Audit & Stratégie", text: "Nous analysons votre prototype IA pour identifier les faiblesses techniques et établissons un plan de transformation sur-mesure." },
+                { number: "02", title: "Reconstruction Ciblée", text: "Je reconstruis les parties critiques du backend en conservant ce qui fonctionne. Vous suivez l'avancement en temps réel." },
+                { number: "03", title: "Tests Industriels", text: "Stress test de l'application et correction des vulnérabilités pour une résistance optimale en conditions réelles." },
+                { number: "04", title: "Lancement & Suivi", text: "Livraison de votre application renforcée avec option de monitoring continu et maintenance évolutive." },
               ].map((step, i) => (
                 <div key={i} className="grid grid-cols-1 md:grid-cols-4 gap-8 items-center">
                   <div className="text-8xl font-extrabold text-gray-700 text-center">{step.number}</div>
@@ -132,80 +107,41 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Section Offres - Nouvelle section ajoutée */}
         <section className="py-20 bg-gray-900">
           <div className="max-w-5xl mx-auto px-4 text-center">
             <h2 className="text-base font-semibold text-cyan-400 tracking-wider uppercase">Solutions Clés en Main</h2>
             <p className="mt-2 text-3xl sm:text-4xl font-bold">Choisissez Votre Pack de Transformation</p>
-            
             <div className="mt-12 grid md:grid-cols-3 gap-8 text-left">
               <div className="bg-gray-800/50 p-8 rounded-xl border border-gray-700">
                 <h3 className="text-2xl font-bold text-cyan-400 mb-4">Rescue Pack</h3>
                 <p className="text-gray-300 mb-6">Pour les prototypes IA qui montrent des faiblesses</p>
                 <ul className="space-y-3 mb-8">
-                  <li className="flex items-start">
-                    <span className="text-cyan-400 mr-2">✓</span>
-                    <span>Audit complet du backend</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-cyan-400 mr-2">✓</span>
-                    <span>Correction de 5 failles critiques</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-cyan-400 mr-2">✓</span>
-                    <span>Optimisation des performances</span>
-                  </li>
+                  <li className="flex items-start"><span className="text-cyan-400 mr-2">✓</span><span>Audit complet du backend</span></li>
+                  <li className="flex items-start"><span className="text-cyan-400 mr-2">✓</span><span>Correction de 5 failles critiques</span></li>
+                  <li className="flex items-start"><span className="text-cyan-400 mr-2">✓</span><span>Optimisation des performances</span></li>
                 </ul>
                 <div className="text-3xl font-bold mt-6">499€<span className="text-gray-400 text-lg">/mois</span></div>
               </div>
-              
               <div className="bg-gray-800/50 p-8 rounded-xl border border-cyan-500 relative">
-                <div className="absolute top-0 right-0 bg-cyan-500 text-gray-900 px-4 py-1 font-bold rounded-bl-lg">
-                  Populaire
-                </div>
+                <div className="absolute top-0 right-0 bg-cyan-500 text-gray-900 px-4 py-1 font-bold rounded-bl-lg">Populaire</div>
                 <h3 className="text-2xl font-bold text-cyan-400 mb-4">Full Transform</h3>
                 <p className="text-gray-300 mb-6">Reconstruction complète pour applications critiques</p>
                 <ul className="space-y-3 mb-8">
-                  <li className="flex items-start">
-                    <span className="text-cyan-400 mr-2">✓</span>
-                    <span>Backend entièrement reconstruit</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-cyan-400 mr-2">✓</span>
-                    <span>Intégration de 3 APIs métier</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-cyan-400 mr-2">✓</span>
-                    <span>Monitoring 24/7 pendant 3 mois</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-cyan-400 mr-2">✓</span>
-                    <span>Garantie de performance</span>
-                  </li>
+                  <li className="flex items-start"><span className="text-cyan-400 mr-2">✓</span><span>Backend entièrement reconstruit</span></li>
+                  <li className="flex items-start"><span className="text-cyan-400 mr-2">✓</span><span>Intégration de 3 APIs métier</span></li>
+                  <li className="flex items-start"><span className="text-cyan-400 mr-2">✓</span><span>Monitoring 24/7 pendant 3 mois</span></li>
+                  <li className="flex items-start"><span className="text-cyan-400 mr-2">✓</span><span>Garantie de performance</span></li>
                 </ul>
                 <div className="text-3xl font-bold mt-6">2 499€<span className="text-gray-400 text-lg">/projet</span></div>
               </div>
-              
               <div className="bg-gray-800/50 p-8 rounded-xl border border-gray-700">
                 <h3 className="text-2xl font-bold text-cyan-400 mb-4">Enterprise</h3>
                 <p className="text-gray-300 mb-6">Solution complète pour startups ambitieuses</p>
                 <ul className="space-y-3 mb-8">
-                  <li className="flex items-start">
-                    <span className="text-cyan-400 mr-2">✓</span>
-                    <span>Backend haute disponibilité</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-cyan-400 mr-2">✓</span>
-                    <span>Support technique prioritaire</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-cyan-400 mr-2">✓</span>
-                    <span>Évolutions mensuelles incluses</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-cyan-400 mr-2">✓</span>
-                    <span>Architecture multi-cloud</span>
-                  </li>
+                  <li className="flex items-start"><span className="text-cyan-400 mr-2">✓</span><span>Backend haute disponibilité</span></li>
+                  <li className="flex items-start"><span className="text-cyan-400 mr-2">✓</span><span>Support technique prioritaire</span></li>
+                  <li className="flex items-start"><span className="text-cyan-400 mr-2">✓</span><span>Évolutions mensuelles incluses</span></li>
+                  <li className="flex items-start"><span className="text-cyan-400 mr-2">✓</span><span>Architecture multi-cloud</span></li>
                 </ul>
                 <div className="text-3xl font-bold mt-6">4 999€<span className="text-gray-400 text-lg">/mois</span></div>
               </div>
@@ -213,27 +149,17 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Section Contact - Améliorée avec argumentaire */}
         <section id="contact" className="py-20 bg-gray-950/50">
           <div className="max-w-4xl mx-auto px-4 text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-              Votre prototype IA mérite un backend professionnel
-            </h2>
-            <p className="text-gray-300 mb-6 text-lg">
-              Ne laissez pas les limites techniques gâcher votre vision
-            </p>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">Votre prototype IA mérite un backend professionnel</h2>
+            <p className="text-gray-300 mb-6 text-lg">Ne laissez pas les limites techniques gâcher votre vision</p>
             <p className="max-w-2xl mx-auto text-cyan-400 italic mb-10">
               "Après l'intervention d'Allogic, notre app générée par IA a tenu la charge du Black Friday"
               <span className="block mt-2 text-white not-italic">- Startup E-commerce</span>
             </p>
-            
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-              <a href={`https://wa.me/${WHATSAPP_NUMBER_RAW}`} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 w-full sm:w-auto bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Diagnostic Gratuit sur WhatsApp
-              </a>
-              <a href={`mailto:${EMAIL_ADDRESS}`} className="flex items-center justify-center gap-3 w-full sm:w-auto bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Demander un Devis Personnalisé
-              </a>
+              <a href={`https://wa.me/${WHATSAPP_NUMBER_RAW}`} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 w-full sm:w-auto bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">Diagnostic Gratuit sur WhatsApp</a>
+              <a href={`mailto:${EMAIL_ADDRESS}`} className="flex items-center justify-center gap-3 w-full sm:w-auto bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">Demander un Devis Personnalisé</a>
             </div>
           </div>
         </section>
