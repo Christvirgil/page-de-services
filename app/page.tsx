@@ -2,7 +2,7 @@
 import Header from '@/components/Header';
 
 // ===================================================================
-//  MODIFIEZ VOS INFORMATIONS PERSONNELLES ICI
+//  VOS INFORMATIONS PERSONNELLES
 // ===================================================================
 const EMAIL_ADDRESS = "christvirgil@gmail.com";
 const PHONE_NUMBER_DISPLAY = "+241 60 06 14 97"; 
@@ -26,11 +26,11 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-grid-gray-800 [mask-image:linear-gradient(to_bottom,white_5%,transparent_80%)]"></div>
           <div className="relative z-10">
             <h1 className="text-4xl sm:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 leading-tight">
-              Votre IA crée le design.<br />Je transforme l&apos;ébauche en arme de croissance
+              Votre IA crée le design.<br />Je transforme l'ébauche en arme de croissance
             </h1>
             <p className="mt-6 max-w-2xl mx-auto text-lg sm:text-xl text-gray-300">
               Service expert pour transformer vos prototypes IA en backends industriels - 
-              aussi flexibles que du sur-mesure, aussi simples qu&apos;une solution clé en main
+              aussi flexibles que du sur-mesure, aussi simples qu'une solution clé en main
             </p>
             <a href="#contact" className="mt-10 inline-block bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/20">
               Transformer mon prototype IA
@@ -42,7 +42,7 @@ export default function HomePage() {
         <section id="services" className="py-20 bg-gray-950/50">
           <div className="max-w-6xl mx-auto px-4 text-center">
             <h2 className="text-base font-semibold text-cyan-400 tracking-wider uppercase">Votre Avantage Concurrentiel</h2>
-            <p className="mt-2 text-3xl sm:text-4xl font-bold">Pourquoi l&apos;IA seule ne suffit pas</p>
+            <p className="mt-2 text-3xl sm:text-4xl font-bold">Pourquoi l'IA seule ne suffit pas</p>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-400">
               Les prototypes IA sont fragiles. Je les transforme en solutions professionnelles
             </p>
@@ -54,7 +54,7 @@ export default function HomePage() {
                 <h3 className="text-xl font-bold mb-2">Backend Scalable</h3>
                 <p className="text-gray-400 text-sm">
                   Votre app ne crashera plus sous charge. Architecture optimisée pour supporter 
-                  des milliers d&apos;utilisateurs simultanés
+                  des milliers d'utilisateurs simultanés
                 </p>
               </div>
               
@@ -95,7 +95,7 @@ export default function HomePage() {
         <section id="processus" className="py-20">
           <div className="max-w-5xl mx-auto px-4">
             <h2 className="text-base font-semibold text-cyan-400 tracking-wider uppercase text-center">Votre Chemin Vers le Succès</h2>
-            <p className="mt-2 text-3xl sm:text-4xl font-bold text-center">De l&apos;ébauche IA à l&apos;application professionnelle</p>
+            <p className="mt-2 text-3xl sm:text-4xl font-bold text-center">De l'ébauche IA à l'application professionnelle</p>
             
             <div className="mt-16 space-y-16">
               {[
@@ -107,12 +107,12 @@ export default function HomePage() {
                 {
                   number: "02",
                   title: "Reconstruction Ciblée",
-                  text: "Je reconstruis les parties critiques du backend en conservant ce qui fonctionne. Vous suivez l&apos;avancement en temps réel.",
+                  text: "Je reconstruis les parties critiques du backend en conservant ce qui fonctionne. Vous suivez l'avancement en temps réel.",
                 },
                 {
                   number: "03",
                   title: "Tests Industriels",
-                  text: "Stress test de l&apos;application et correction des vulnérabilités pour une résistance optimale en conditions réelles.",
+                  text: "Stress test de l'application et correction des vulnérabilités pour une résistance optimale en conditions réelles.",
                 },
                 {
                   number: "04",
@@ -223,7 +223,7 @@ export default function HomePage() {
               Ne laissez pas les limites techniques gâcher votre vision
             </p>
             <p className="max-w-2xl mx-auto text-cyan-400 italic mb-10">
-              &quot;Après l&apos;intervention d&apos;Allogic, notre app générée par IA a tenu la charge du Black Friday&quot;
+              "Après l'intervention d'Allogic, notre app générée par IA a tenu la charge du Black Friday"
               <span className="block mt-2 text-white not-italic">- Startup E-commerce</span>
             </p>
             
@@ -240,7 +240,7 @@ export default function HomePage() {
       </main>
       <footer className="text-center py-8 border-t border-gray-800">
         <div className="text-gray-500 space-y-2">
-          <p>© 2024 - Allogic.dev | Le pont entre l&apos;IA et le code industriel</p>
+          <p>© 2024 - Allogic.dev | Le pont entre l'IA et le code industriel</p>
           <p>Contact : <a href={`tel:${PHONE_NUMBER_LINK}`} className="hover:text-cyan-400 transition-colors">{PHONE_NUMBER_DISPLAY}</a></p>
         </div>
       </footer>
