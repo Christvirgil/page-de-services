@@ -8,8 +8,21 @@ import FeaturedPostCard from '@/components/FeaturedPostCard';
 import PostCard from '@/components/PostCard';
 import Sidebar from '@/components/Sidebar';
 
+// Définition de l'interface pour un article de blog
+interface BlogPost {
+  slug: string;
+  frontmatter: {
+    title: string;
+    date: string;
+    description: string;
+    category: string;
+    tags: string[];
+    [key: string]: any; // Permet d'autres propriétés si nécessaire
+  };
+}
+
 // Cette fonction lit tous les fichiers .mdx dans le dossier content/blog
-function getPosts() {
+function getPosts(): BlogPost[] {
   const postsDirectory = path.join(process.cwd(), 'content/blog');
   const filenames = fs.readdirSync(postsDirectory);
 
@@ -21,21 +34,19 @@ function getPosts() {
 
     return {
       slug,
-      frontmatter,
+      frontmatter: frontmatter as BlogPost['frontmatter'], // Assurer le type
     };
   });
 
   // Trie les articles par date, le plus récent en premier
   return posts.sort((a, b) => {
-    if (new Date(a.frontmatter.date) < new Date(b.frontmatter.date)) {
-      return 1;
-    } else {
-      return -1;
-    }
+    const dateA = new Date(a.frontmatter.date).getTime();
+    const dateB = new Date(b.frontmatter.date).getTime();
+    return dateB - dateA;
   });
 }
 
-function getCategories(posts: { frontmatter: { category: string } }[]) {
+function getCategories(posts: BlogPost[]): string[] {
   const categories = posts.map(post => post.frontmatter.category);
   return [...new Set(categories)];
 }
@@ -54,7 +65,7 @@ export default function BlogIndex() {
           <h1 className="text-4xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 leading-tight mb-4">
             Le Blog
           </h1>
-          <p className="text-lg text-gray-300">
+          <p className="mt-4 text-lg text-gray-300">
             Tutoriels et réflexions sur Laravel, l'IA et le développement web.
           </p>
         </div>
