@@ -35,7 +35,7 @@ function getPosts() {
   });
 }
 
-function getCategories(posts) {
+function getCategories(posts: { frontmatter: { category: string } }[]) {
   const categories = posts.map(post => post.frontmatter.category);
   return [...new Set(categories)];
 }
