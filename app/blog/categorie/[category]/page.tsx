@@ -23,7 +23,11 @@ function getPosts() {
     };
   });
 
-  return posts.sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date));
+  return posts.sort((a, b) => {
+    const dateA = new Date(a.frontmatter.date).getTime();
+    const dateB = new Date(b.frontmatter.date).getTime();
+    return dateB - dateA;
+  });
 }
 
 // Génère les pages statiques pour chaque catégorie à la construction
