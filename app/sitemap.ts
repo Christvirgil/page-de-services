@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next'
-import { getPosts } from '@/lib/posts'; // Import depuis lib/posts
-import { getCaseStudies } from './etudes-de-cas/page'; // Assurez-vous que getCaseStudies est exporté
+import { getPosts } from '@/lib/posts';
+import { getCaseStudies } from '@/lib/caseStudies'; // Import depuis lib/caseStudies
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://allogic.dev' // Remplacez par votre domaine réel
