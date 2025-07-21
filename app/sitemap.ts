@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next'
-import { getPosts } from './blog/page'; // Assurez-vous que getPosts est exporté
+import { getPosts } from '@/lib/posts'; // Import depuis lib/posts
 import { getCaseStudies } from './etudes-de-cas/page'; // Assurez-vous que getCaseStudies est exporté
 
 export default function sitemap(): MetadataRoute.Sitemap {
