@@ -1,0 +1,85 @@
+---
+title: "Optimisation de Base de Données : 3 Requêtes Lentes que je Trouve dans 90% des Projets"
+date: '2025-07-17'
+description: "Votre application est lente ? Le coupable se cache souvent dans la base de données. Découvrez les 3 erreurs de requêtes les plus courantes que je détecte lors de mes audits, et comment les corriger pour booster vos performances."
+category: 'Performance'
+tags: ['Base de données', 'SQL', 'Optimisation', 'Laravel']
+---
+
+La base de données est le cœur de la plupart des applications. C'est là que résident toutes vos précieuses informations : utilisateurs, produits, commandes, articles... Si ce cœur bat trop lentement, toute l'application en souffre. Lors de mes audits de performance, je constate que 90% des goulots d'étranglement proviennent de trois types d'erreurs de requêtes SQL.
+
+Si vous êtes développeur, chef de projet ou que votre application ralentit mystérieusement, lisez attentivement.
+
+## Problème N°1 : La Requête N+1 (Le Tueur Silencieux)
+
+C'est l'erreur de performance la plus sournoise et la plus répandue. Elle survient lorsque, pour afficher une liste d'éléments, l'application fait d'abord une requête pour la liste, puis pour **chaque élément** de cette liste, elle fait une requête supplémentaire pour charger des données liées.
+
+**Exemple typique (Laravel/Eloquent) :**
+Vous affichez une liste de 100 articles de blog. Pour chaque article, vous voulez afficher le nom de son auteur.
+
+**Code problématique :**
+```php
+$articles = Article::all(); // 1 requête
+foreach ($articles as $article) {
+    echo $article->title;
+    echo $article->author->name; // N requêtes (une par auteur)
+}
+// Total : 1 + N requêtes
+
+Si vous avez 100 articles, cela fait 101 requêtes à la base de données !
+
+La solution (Eager Loading) :
+Demandez à Laravel de charger les auteurs en même temps que les articles.
+
+```php
+$articles = Article::with('author')->get(); // 1 requête
+foreach ($articles as $article) {
+    echo $article->title;
+    echo $article->author->name; // Zéro requête supplémentaire
+}
+// Total : 1 requête
+```
+Impact : Des pages qui passaient de 5 secondes à 50 millisecondes. C'est magique.
+Problème N°2 : L'Absence d'Index (La Recherche Aveugle)
+Une base de données sans index, c'est comme une bibliothèque sans système de classement. Pour trouver un livre, il faut tout parcourir.
+Exemple : Vous cherchez un utilisateur par son email.
+
+Requête lente sans index :
+
+```sql
+SELECT * FROM users WHERE email = 'jean.dupont@example.com';
+```
+
+Si la colonne email n'est pas indexée, la base de données va devoir lire chaque ligne de la table users pour trouver le bon email. Si vous avez des millions d'utilisateurs, c'est un cauchemar.
+
+La solution : Créer un index.
+
+```sql
+-- Pour MySQL/PostgreSQL
+CREATE INDEX idx_users_email ON users (email);
+```
+Un index est comme un annuaire téléphonique. La base de données peut aller directement à la bonne "page" pour trouver l'information.
+Impact : Des recherches instantanées au lieu de secondes d'attente.
+Problème N°3 : Le Filtre sur Colonne Calculée ou Fonction
+Tenter de filtrer des données en utilisant une fonction sur une colonne dans la clause WHERE est une erreur classique. La base de données ne peut pas utiliser ses index dans ce cas.
+Exemple problématique :
+Vous voulez trouver tous les utilisateurs dont l'email commence par "a".
+
+```sql
+-- Requête lente (ne peut pas utiliser l'index sur 'email')
+SELECT * FROM users WHERE LOWER(email) LIKE 'a%';
+```
+
+En utilisant LOWER(email), vous forcez la base de données à calculer le LOWER() pour chaque ligne avant de comparer. Elle ne peut pas sauter directement aux bonnes lignes via l'index.
+
+La solution : Adapter la recherche.
+
+```sql
+-- Requête optimisée (peut utiliser l'index sur 'email')
+SELECT * FROM users WHERE email LIKE 'a%';
+```
+Impact : Votre index est enfin utilisé, et la requête est rapide. Si vous avez besoin d'une recherche insensible à la casse, il existe d'autres stratégies (par exemple, gérer cela au niveau de la collation de la colonne).
+Votre application est lente ? Le coupable est souvent la base de données.
+Ces problèmes sont le quotidien des projets qui n'ont pas été optimisés dès le départ. Une base de données mal configurée ou des requêtes mal écrites peuvent rendre même le serveur le plus puissant inutile.
+Je suis spécialisé dans l'audit de performance et l'optimisation des applications Laravel et de leurs bases de données. Je peux identifier ces goulots d'étranglement et vous fournir un plan d'action précis pour redonner de la vitesse à votre application.
+Demandez un audit de performance ou réservez une session de coaching pour plonger dans l'optimisation de vos requêtes.
