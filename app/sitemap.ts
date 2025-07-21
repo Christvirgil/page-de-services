@@ -3,7 +3,7 @@ import { getPosts } from '@/lib/posts';
 import { getCaseStudies } from '@/lib/caseStudies'; // Import depuis lib/caseStudies
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://allogic.dev' // Remplacez par votre domaine réel
+  const baseUrl = 'https://page-de-services.vercel.app' // Remplacez par votre domaine réel
 
   const posts = getPosts().map(post => ({
     url: `${baseUrl}/blog/${post.slug}`,
