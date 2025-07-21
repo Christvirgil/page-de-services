@@ -22,7 +22,7 @@ interface BlogPost {
 }
 
 // Cette fonction lit tous les fichiers .mdx dans le dossier content/blog
-function getPosts(): BlogPost[] {
+export function getPosts(): BlogPost[] {
   const postsDirectory = path.join(process.cwd(), 'content/blog');
   const filenames = fs.readdirSync(postsDirectory);
 

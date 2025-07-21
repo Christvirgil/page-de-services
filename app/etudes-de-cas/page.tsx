@@ -6,7 +6,7 @@ import matter from 'gray-matter';
 import Link from 'next/link';
 import Header from '@/components/Header';
 
-function getCaseStudies() {
+export function getCaseStudies() {
   const caseStudiesDir = path.join(process.cwd(), 'content/etudes-de-cas');
   const filenames = fs.readdirSync(caseStudiesDir);
 
