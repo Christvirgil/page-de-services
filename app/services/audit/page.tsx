@@ -38,9 +38,14 @@ export default function AuditPage() {
               <li className="flex items-center gap-3"><span className="text-cyan-400">✓</span> Audit des failles de sécurité OWASP Top 10</li>
               <li className="flex items-center gap-3"><span className="text-cyan-400">✓</span> Rapport PDF avec plan d'action priorisé</li>
             </ul>
-            <Link href="/contact" className="block text-center w-full bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
-              Commander un Audit
-            </Link>
+            <a 
+  href="https://www.paypal.com/ncp/payment/9ZLAGAW6VU4NU"
+  target="_blank" 
+  rel="noopener noreferrer" 
+  className="block text-center w-full bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+>
+  Commander l'Audit (299€)
+</a>
           </div>
         </div>
 

@@ -25,7 +25,7 @@ export default function ContactPage() {
     const data = new FormData(form);
 
     try {
-      const response = await fetch("https://formspree.io/f/VOTRE_CODE_SECRET_ICI", {
+      const response = await fetch("https://formspree.io/f/movllezq", {
         method: 'POST',
         body: data,
         headers: {
