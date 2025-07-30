@@ -1,0 +1,84 @@
+---
+title: "Comment Obtenir un Serveur Gratuit pour Votre Site Web ou Application (0 Euro) ?"
+date: '2025-09-20'
+description: "Découvrez les étapes concrètes pour héberger votre backend Laravel ou toute application web sur un serveur cloud gratuit, sans dépenser un centime. Maîtrisez votre infrastructure dès aujourd'hui."
+category: 'Développement'
+tags: ['Hébergement Gratuit', 'Serveur Cloud', 'Oracle Cloud', 'Laravel', 'Déploiement', 'Infrastructure', '0 Euro']
+---
+
+<img src="/images/image-des-serveurs.jpg" alt="Serveur Cloud Gratuit Oracle" class="w-full max-w-2xl mx-auto my-8 rounded-lg shadow-lg" />
+
+Lancer un site web ou une application, c'est passionnant ! Mais l'hébergement peut rapidement devenir un poste de dépense important. Heureusement, il existe des solutions pour obtenir un serveur puissant et fiable sans dépenser un seul euro. Oui, vous avez bien lu : **0 euro**.
+
+Dans cet article, je vais vous guider pas à pas pour déployer votre backend Laravel (ou toute autre application nécessitant un serveur Linux) sur **Oracle Cloud Free Tier**, l'une des offres gratuites les plus généreuses du marché. C'est un peu de "cambouis", mais la liberté et le contrôle total de votre infrastructure en valent la peine.
+
+## Pourquoi Oracle Cloud Free Tier ?
+
+Contrairement à d'autres fournisseurs qui limitent leurs offres gratuites à 12 mois, Oracle Cloud propose des ressources **"Always Free" (toujours gratuites)**. Cela inclut des machines virtuelles (VM) avec des spécifications impressionnantes, idéales pour héberger un backend d'application.
+
+## Étape 1 : Créer Votre Compte Oracle Cloud et Lancer Votre Machine Virtuelle (VM)
+
+Cette étape est la plus cruciale et demande de la patience, car Oracle a des processus de vérification stricts pour éviter les abus de son offre gratuite.
+
+1.  **Rendez-vous sur [cloud.oracle.com/free](https://cloud.oracle.com/free)** et cliquez sur "Start for Free".
+2.  **Suivez attentivement toutes les étapes d'inscription.** Vous devrez fournir votre pays, nom, email, un mot de passe complexe, et votre numéro de téléphone pour vérification (SMS).
+3.  **Informations de Carte de Crédit :** C'est une étape inévitable. Oracle (comme d'autres fournisseurs cloud) demande une carte de crédit pour vérifier votre identité et s'assurer que vous n'abusez pas de l'offre gratuite. **Vous ne serez pas facturé** tant que vous restez dans les limites de l'offre "Always Free" ou que vous n'activez pas un plan payant.
+4.  **Validation du Compte :** Attendez la validation de votre compte. Cela peut prendre de quelques minutes à quelques heures. Vous recevrez plusieurs emails de confirmation.
+
+### Lancer Votre Première VM Always Free
+
+Une fois votre compte validé et connecté à la Console Cloud :
+
+1.  **Générez une Paire de Clés SSH :** C'est la méthode sécurisée pour vous connecter à votre serveur. Ouvrez votre terminal (CMD ou PowerShell sur Windows, Terminal sur Linux/macOS) et tapez :
+    ```bash
+    ssh-keygen -t rsa -b 2048 -f ~/.ssh/oracle_key
+    ```
+    Appuyez sur Entrée pour ne pas mettre de "passphrase" (mot de passe pour votre clé) pour simplifier. Cela créera `oracle_key` (clé privée, à ne jamais partager !) et `oracle_key.pub` (clé publique).
+    **Gardez précieusement le contenu de `oracle_key.pub`** (ouvrez-le avec un éditeur de texte et copiez tout le texte).
+
+2.  **Créez une Instance de Machine Virtuelle (VM) :** Dans la console Oracle Cloud, cliquez sur "Créer une instance de machine virtuelle".
+    *   **Nom :** Donnez un nom à votre VM (ex: `backend-laravel`).
+    *   **Image :** Cliquez sur "Modifier l'image" et choisissez **Ubuntu** (Ubuntu Minimal 22.04 LTS est un excellent choix).
+    *   **Forme :** Cliquez sur "Modifier la forme". **Assurez-vous de choisir une forme ARM (VM.Standard.A1.Flex).** Pour l'offre "Always Free", vous avez droit à 4 OCPU et 24 Go de RAM. Pour un début, 1 OCPU et 6 Go de RAM sont largement suffisants et gratuits.
+    *   **Réseau :** Laissez par défaut. Oracle créera un réseau virtuel pour vous.
+    *   **Ajouter des clés SSH :** C'est essentiel ! Choisissez "Coller des clés SSH" et collez ici le contenu de votre fichier `oracle_key.pub` généré précédemment.
+    *   **Volume de démarrage :** Laissez par défaut (souvent 50 Go gratuits).
+
+3.  **Cliquez sur "Créer"** et attendez que la VM passe de "Provisioning" à "Running". Notez son **"Adresse IP publique"**.
+
+## Étape 2 : Se Connecter à Votre Serveur via SSH
+
+Une fois votre VM lancée, vous pouvez vous y connecter en SSH. Voici les options :
+
+*   **Avec Git Bash (Windows) :** Si vous avez Git installé, ouvrez Git Bash et tapez :
+    ```bash
+    ssh -i C:/Users/votre_nom_utilisateur/.ssh/oracle_key ubuntu@VOTRE_IP_PUBLIQUE
+    ```
+    Remplacez `votre_nom_utilisateur` et `VOTRE_IP_PUBLIQUE` par vos informations.
+
+*   **Avec WSL (Windows Subsystem for Linux) ou Linux/macOS :** Ouvrez votre terminal et tapez :
+    ```bash
+    ssh -i ~/.ssh/oracle_key ubuntu@VOTRE_IP_PUBLIQUE
+    ```
+
+La première connexion vous demandera de confirmer. Tapez `yes`.
+
+Félicitations ! Vous êtes maintenant connecté à votre propre serveur Linux gratuit. La première chose à faire est de le mettre à jour :
+
+```bash
+sudo apt update && sudo apt upgrade -y
+```
+
+## Prochaines Étapes : Installer Votre Stack LEMP (Linux, Nginx, MySQL, PHP)
+
+Maintenant que votre serveur est opérationnel, l'étape suivante consiste à installer l'environnement nécessaire pour votre application Laravel : Nginx (serveur web), MySQL (base de données) et PHP. C'est ce qu'on appelle un stack LEMP.
+
+Cette maîtrise de l'infrastructure, de la création du serveur à son déploiement, est une compétence clé pour tout développeur souhaitant une autonomie totale sur ses projets.
+
+---
+
+**Besoin d'aide pour déployer votre application Laravel ou toute autre solution web sur un serveur ?**
+
+Que ce soit pour configurer votre serveur, optimiser votre base de données, ou assurer la maintenance de votre infrastructure, mon expertise en développement et déploiement est à votre service.
+
+**[Découvrez mon service de Création & Maintenance de Sites Web et donnons vie à votre projet !](/services/creation-maintenance-sites)**

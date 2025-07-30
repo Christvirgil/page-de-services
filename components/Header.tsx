@@ -1,15 +1,25 @@
-// components/Header.tsx
-"use client"; // Ce composant a besoin d'interactivité côté client (pour le menu mobile)
+// Fichier : components/Header.tsx (Version FINALE)
+
+"use client";
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation'; // On importe un hook pour connaître la page actuelle
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname(); // On récupère l'URL actuelle
+
+  // Si on est sur la page d'accueil, les liens pointent vers les sections (#).
+  // Sinon, ils pointent vers la page d'accueil avec l'ancre.
+  const getLink = (path: string) => (pathname === '/' ? path : `/${path}`);
 
   const navLinks = [
-    { name: "Services", href: "#services" },
-    { name: "Processus", href: "#processus" },
+    { name: "Services", href: getLink("#services") },
+    { name: "Processus", href: getLink("#processus") },
+    { name: "Blog", href: "/blog" },
+    { name: "À Propos", href: "/a-propos" },
+    { name: "FAQ", href: "/faq" },
   ];
 
   return (
@@ -35,12 +45,15 @@ export default function Header() {
                   {link.name}
                 </a>
               ))}
-              <a
-                href="#contact"
+              {/* ========================================================== */}
+              {/* MODIFICATION ICI : Le lien pointe vers /contact            */}
+              {/* ========================================================== */}
+              <Link
+                href="/contact"
                 className="bg-cyan-500 text-white hover:bg-cyan-600 px-3 py-2 rounded-md text-sm font-bold transition-colors"
               >
                 Contact
-              </a>
+              </Link>
             </div>
           </div>
           
@@ -79,13 +92,16 @@ export default function Header() {
                 {link.name}
               </a>
             ))}
-             <a
-                href="#contact"
+             {/* ========================================================== */}
+             {/* MODIFICATION ICI : Le lien pointe vers /contact            */}
+             {/* ========================================================== */}
+             <Link
+                href="/contact"
                 onClick={() => setIsMenuOpen(false)}
                 className="bg-cyan-500 text-white hover:bg-cyan-600 block px-3 py-2 rounded-md text-base font-bold mt-2"
               >
                 Contact
-              </a>
+              </Link>
           </div>
         </div>
       )}
