@@ -70,13 +70,13 @@ export default function CoachingPage() {
                 <li className="flex items-center"><span className="text-cyan-400 mr-2">✓</span>Session enregistrée (sur demande)</li>
               </ul>
               <a 
-                href="https://buy.stripe.com/test_bIYg0f1E78nQfS4fYZ" // <-- Ton lien Stripe pour le Coaching
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="mt-8 block text-center w-full bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
-              >
-                Réserver une session
-              </a>
+  href="https://www.paypal.com/ncp/payment/629VLLAP28YFY" // <-- METTEZ LE BON LIEN PAYPAL A 75€ ICI
+  target="_blank" 
+  rel="noopener noreferrer"
+  className="mt-8 block text-center w-full bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+>
+  Réserver la Session (75€)
+</a>
             </div>
           </div>
         </section>
