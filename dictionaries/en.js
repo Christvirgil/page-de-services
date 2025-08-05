@@ -91,6 +91,7 @@ export const en = {
   coaching_for_who_item4: "Optimize a specific feature.",
   coaching_for_who_item5: "Engage in pair programming on a complex point.",
   coaching_card_title: "1-Hour Session",
+   coaching_card_price: "€75/hour",
   coaching_card_feature1: "Live Bug Resolution",
   coaching_card_feature2: "Architectural Guidance",
   coaching_card_feature3: "Pair Programming",
