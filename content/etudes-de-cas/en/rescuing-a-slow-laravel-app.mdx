@@ -1,0 +1,68 @@
+---
+title: "Rescuing a Slow Laravel App: Response Time Reduced by 90%"
+slug_fr: "sauvetage-app-laravel-lente"
+date: '2025-07-29'
+client: "Project Management SaaS"
+problem: "Critical application sluggishness, threatening user retention."
+solution: "Performance audit, identification and correction of N+1 queries, and addition of database indexes."
+result: "Key page loading times reduced from 5s to under 500ms."
+---
+
+## The Context: A Promising SaaS on the Brink of Collapse
+
+My client, let's call them "ProjectFlow," had developed an excellent project management SaaS. The tool was appreciated for its features, but it suffered from a common ailment affecting many growing applications: **slowness.**
+
+Pages listing tasks and projects sometimes took over 5 seconds to load, making the user experience frustrating. The ProjectFlow team received increasing complaints, and their churn rate began to rise dangerously. They were on the verge of losing clients due to a purely technical problem.
+
+## The Challenge: Identifying the Bottleneck
+
+ProjectFlow's development team, highly competent in functional aspects, struggled to pinpoint the exact source of the problem. The server was powerful, and the code seemed clean at first glance. That's where I stepped in with a clear mission: **conduct a comprehensive performance audit to find and eliminate the bottleneck.**
+
+### My approach was methodical
+
+<ol>
+  <li><strong>Static Code Analysis:</strong> I first examined Eloquent relationships and how data was being fetched in controllers and Blade views.</li>
+  <li><strong>Query Monitoring:</strong> I used Laravel Telescope and database profiling tools to observe in real-time the SQL queries executed during the loading of critical pages.</li>
+</ol>
+
+The diagnosis quickly confirmed two classic but devastating issues.
+
+## The Solution: Two Targeted Optimizations
+
+### 1. Eradicating N+1 Queries
+
+### The N+1 query problem
+
+<ul>
+  <li>1 query to retrieve 50 projects.</li>
+  <li>50 additional queries to retrieve the client name associated with each project.</li>
+  <li>50 more queries to retrieve the number of tasks for each project.</li>
+</ul>
+
+**Total: 101 queries for a single page!**
+
+The solution was to implement Laravel's **Eager Loading**. By changing just one line of code, we went from 101 queries to only 3 optimized queries.
+
+**Before:**
+```php
+$projects = Project::all(); // 1 query
+// Loop with $project->client->name and $project->tasks->count() -> N+N queries
+
+After:
+Generated php
+$projects = Project::with('client', 'tasks')->get(); // 3 queries!
+
+2. Adding Strategic Indexes
+The second issue stemmed from searching. The tasks table contained hundreds of thousands of entries, but the user_id column was not indexed. Every time a user wanted to view their tasks, the database had to scan the entire table.
+By adding a simple index to this column, search queries became almost instantaneous.
+Generated sql
+CREATE INDEX idx_tasks_user_id ON tasks (user_id);
+Use code with caution.
+SQL
+The Results: A Transformed Application
+<ul>
+<li><strong>Average loading time for critical pages reduced from 5 seconds to under 500 milliseconds.</strong> (A 90% improvement).</li>
+<li><strong>Database server load decreased by 70%</strong>, allowing for more concurrent users without increasing infrastructure costs.</li>
+<li><strong>Increased client satisfaction</strong> and halt to subscription churn.</li>
+</ul>
+This case study shows that it's not always necessary to rewrite an entire application or invest in more expensive servers. A targeted audit and technical expertise can deliver massive performance gains and save a business.

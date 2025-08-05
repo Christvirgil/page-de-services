@@ -1,0 +1,232 @@
+// Fichier : dictionaries/fr.js
+export const fr = {
+  hero_title_line1: "Développeur Laravel & IA",
+  hero_title_line2: "J'automatise vos projets, je booste votre code",
+  hero_description: "Services, coaching et formations pour transformer vos idées en applications robustes et performantes, en intégrant la puissance de l'Intelligence Artificielle.",
+  hero_button: "Découvrir mes services",
+  services_tagline: "Comment je peux vous aider ?",
+  services_title: "Des solutions concrètes pour vos projets Laravel & IA",
+  service_audit_title: "Audit de Performance & Sécurité",
+  service_audit_desc: "Votre application Laravel est lente ou vous avez des doutes sur sa sécurité ? Je l'analyse en profondeur et vous fournis un rapport d'actions claires.",
+  service_button: "En savoir plus",
+  service_coaching_title: "Session Coaching & Dépannage",
+  service_coaching_price: "75€/heure",
+  service_coaching_desc: "Bloqué sur un problème technique ? Besoin d'un avis d'expert sur votre architecture ? 1h de visio pour résoudre votre problème ensemble.",
+  service_coaching_tag: "Best-seller",
+  service_ia_title: "Intégration d'API IA",
+  service_ia_desc: "Connectez la puissance de ChatGPT (ou autre IA) à votre application Laravel. Idéal pour chatbots, génération de contenu, etc.",
+  service_on_quote: "Sur Devis",
+  service_creation_title: "Création & Maintenance de Sites Web",
+  service_creation_desc: "Besoin d'un site sur mesure avec inscription, ou de la maintenance pour votre site existant (même conçu par IA) ?",
+  recent_project_title: "Mon Dernier Projet en Action",
+  recent_project_desc: "De l'idée à la réalité : une landing page pour une startup de mode durable.",
+  recent_project_card_title: "The Designer Experience",
+  recent_project_card_desc: "Développement d'une page de capture d'emails pour construire une liste d'attente (waitlist) avant le lancement officiel de la plateforme. L'objectif était de créer un design élégant et de mettre en place un formulaire fonctionnel pour collecter les inscriptions.",
+  recent_project_img_alt: "Capture d'écran du projet The Designer Experience",
+  testimonial_title: "Ce que disent mes clients",
+  testimonial_text: "“Il a dépassé mes attentes ! Je retravaillerais avec lui sans hésiter. J'ai utilisé Google Translate pour communiquer avec lui en français. C'était une expérience amusante !”",
+  testimonial_author_name: "Cierra D.",
+  testimonial_author_title: "Fondatrice, The Designer Experience",
+  process_tagline: "Votre Chemin Vers le Succès",
+  process_title: "Un processus simple et transparent",
+  process_step1_title: "Contact & Analyse",
+  process_step1_desc: "Nous discutons de votre besoin (coaching, audit, projet...). Je vous pose les bonnes questions pour comprendre parfaitement votre objectif.",
+  process_step2_title: "Proposition & Plan d'Action",
+  process_step2_desc: "Vous recevez une proposition claire et chiffrée. Pour les projets, nous définissons ensemble les étapes clés.",
+  process_step3_title: "Réalisation & Communication",
+  process_step3_desc: "Je réalise la prestation convenue (coaching, audit, développement). Vous êtes tenu informé en continu de l'avancement.",
+  process_step4_title: "Livraison & Suivi",
+  process_step4_desc: "Je vous livre le travail final (rapport d'audit, code fonctionnel...). Je reste disponible pour m'assurer que tout fonctionne parfaitement.",
+  contact_title: "Prêt à passer à la vitesse supérieure ?",
+  contact_desc: "Contactez-moi pour discuter de votre projet, sans engagement.",
+  contact_button_whatsapp: "Discutons sur WhatsApp",
+  contact_button_email: "Envoyez-moi un Email",
+  footer_copyright: "© 2024 - Allogic.dev | Le pont entre l'IA et le code industriel",
+  footer_contact: "Contact :",
+  // dictionaries/fr.js
+
+// ... (tout le texte de la page d'accueil)
+
+  // Page Audit
+  audit_title: "Audit de Performance & Sécurité",
+  audit_subtitle: "Votre application Laravel est lente ? Vous avez des doutes sur sa sécurité ? Obtenez un rapport d'actions claires pour l'optimiser.",
+  audit_for_who_title: "Pour qui est-ce ?",
+  audit_for_who_desc: "Cet audit est idéal pour les fondateurs de SaaS, les chefs de projet ou les développeurs qui font face à :",
+  audit_for_who_item1: "Des temps de chargement lents qui frustrent les utilisateurs.",
+  audit_for_who_item2: "Des doutes sur la robustesse et la sécurité de leur code.",
+  audit_for_who_item3: "Le besoin d'un plan d'action clair avant d'investir dans de nouvelles fonctionnalités.",
+  audit_how_it_works_title: "Comment ça marche ?",
+  audit_how_it_works_desc: "Mon processus est simple et transparent. Je vous livre un rapport complet sous 7 jours.",
+  audit_card_title: "Prestation d'Audit",
+  audit_card_feature1: "Analyse des requêtes N+1",
+  audit_card_feature2: "Vérification des index de BDD",
+  audit_card_feature3: "Audit des failles de sécurité OWASP Top 10",
+  audit_card_feature4: "Rapport PDF avec plan d'action priorisé",
+  audit_card_button: "Commander l'Audit (299€)",
+  audit_testimonial_title: "Ils ont résolu leurs problèmes de performance",
+  audit_case_study_title: "Sauvetage d'une App Laravel Lente : Temps de Réponse Divisé par 10",
+  audit_case_study_desc: "Découvrez comment un audit a permis d'identifier et de corriger des goulots d'étranglement critiques.",
+  audit_case_study_link: "Lire l'étude de cas →",
+  audit_case_study_slug: "sauvetage-app-laravel-lente",
+  // dictionaries/fr.js
+// ... (code précédent)
+  // Page Coaching
+  coaching_title: "Session Coaching & Dépannage",
+  coaching_subtitle: "Bloqué sur un problème technique ? Besoin d'un avis d'expert sur votre architecture ? Résolvons vos défis ensemble en 1h.",
+  coaching_for_who_tagline: "Pour qui est-ce ?",
+  coaching_for_who_title: "Un expert à votre service",
+  coaching_for_who_desc: "Ce coaching est parfait pour les développeurs ou les équipes qui ont besoin d'une aide ponctuelle et ultra-efficace pour :",
+  coaching_for_who_item1: "Débloquer un bug persistant.",
+  coaching_for_who_item2: "Valider une approche technique ou une architecture.",
+  coaching_for_who_item3: "Apprendre une nouvelle notion sur Laravel ou l'IA.",
+  coaching_for_who_item4: "Optimiser une fonctionnalité spécifique.",
+  coaching_for_who_item5: "Faire du \"pair programming\" sur un point précis.",
+  coaching_card_title: "Session d'1h",
+  coaching_card_price: "75€/heure",
+  coaching_card_feature1: "Résolution de bug en direct",
+  coaching_card_feature2: "Conseil en architecture",
+  coaching_card_feature3: "Pair programming",
+  coaching_card_feature4: "Session enregistrée (sur demande)",
+  coaching_card_button: "Réserver la Session (75€)",
+  coaching_process_tagline: "Comment ça marche ?",
+  coaching_process_title: "Un processus simple et transparent",
+  coaching_process_step1_title: "Réservez & Payez",
+  coaching_process_step1_desc: "Cliquez sur le bouton pour réserver votre session et effectuez le paiement sécurisé via PayPal.",
+  coaching_process_step2_title: "Décrivez votre Problème",
+  coaching_process_step2_desc: "Après le paiement, vous recevrez un lien pour me décrire votre défi ou la question à aborder. Partagez le code ou les accès si nécessaire (en toute sécurité).",
+  coaching_process_step3_title: "La Session Live",
+  coaching_process_step3_desc: "Nous nous connectons en visio pour une session d'1h de travail intensif. Vous partagez votre écran, et nous résolvons le problème en direct.",
+  coaching_process_step4_title: "Bénéfices Post-Session",
+  coaching_process_step4_desc: "Vous repartez avec une solution concrète, des explications claires et l'enregistrement de la session (sur demande).",
+  coaching_cta_title: "Prêt à débloquer votre projet ?",
+  coaching_cta_desc: "Une session de coaching est souvent la solution la plus rapide et la plus efficace pour les défis ponctuels.",
+
+// dictionaries/fr.js
+// ... (code précédent)
+  // Page Création & Maintenance
+  creation_title: "Création & Maintenance de Sites Web",
+  creation_subtitle: "Du site vitrine au portail complexe avec inscription, je conçois et maintiens des solutions web robustes et performantes.",
+  creation_services_title: "Mes Services",
+  creation_services_desc: "Je vous accompagne sur plusieurs aspects de vos projets web :",
+  creation_services_item1: "<strong>Création de sites sur mesure :</strong> Sites vitrines, blogs, plateformes avec système d'inscription et gestion d'utilisateurs.",
+  creation_services_item2: "<strong>Développement de fonctionnalités spécifiques :</strong> Intégration d'APIs, modules personnalisés, bases de données complexes.",
+  creation_services_item3: "<strong>Intégration d'IA à votre site :</strong> Ajoutez des fonctionnalités intelligentes comme des chatbots, la génération de contenu, l'analyse de données ou la recherche sémantique.",
+  creation_services_item4: "<strong>Maintenance et évolution :</strong> Mises à jour, corrections de bugs, ajout de nouvelles fonctionnalités pour assurer la pérennité de votre site.",
+  creation_services_item5: "<strong>Maintenance de sites conçus par IA :</strong> Votre site a été généré par une IA et vous avez besoin d'un expert pour le maintenir, l'améliorer ou le déboguer ? Je suis là pour ça.",
+  creation_for_who_title: "Pour qui est-ce ?",
+  creation_for_who_desc: "Ce service est idéal pour les entrepreneurs, les petites et moyennes entreprises, ou toute personne ayant besoin d'une présence web professionnelle et fonctionnelle, avec un accent particulier sur les sites nécessitant des interactions utilisateurs (inscription, gestion de compte, etc.).",
+  creation_card_title: "Votre Projet, Votre Devis",
+  creation_card_price: "Sur Devis",
+  creation_card_desc: "Le coût de votre projet dépendra de sa complexité, des fonctionnalités spécifiques (système d'inscription, intégrations, IA), du volume de contenu et des délais.",
+  creation_card_feature1: "Analyse approfondie de vos besoins",
+  creation_card_feature2: "Conception et développement sur mesure",
+  creation_card_feature3: "Code optimisé et sécurisé",
+  creation_card_feature4: "Support et maintenance post-lancement",
+  creation_card_button: "Obtenir un devis",
+
+  // dictionaries/fr.js
+// ... (code précédent)
+  // Page Intégration IA
+  ia_title: "Intégration d'API IA",
+  ia_subtitle: "Connectez la puissance de ChatGPT, Mistral ou d'autres modèles d'IA à votre application Laravel pour créer des fonctionnalités intelligentes.",
+  ia_for_who_title: "Pour qui est-ce ?",
+  ia_for_who_desc: "Ce service est destiné aux entreprises qui veulent innover en intégrant l'IA pour :",
+  ia_for_who_item1: "Créer des chatbots et assistants intelligents.",
+  ia_for_who_item2: "Générer automatiquement du contenu (descriptions, articles).",
+  ia_for_who_item3: "Analyser et catégoriser des données non structurées.",
+  ia_for_who_item4: "Créer des fonctionnalités de recherche sémantique.",
+  ia_how_it_works_title: "Comment ça marche ?",
+  ia_how_it_works_desc: "Nous définissons ensemble vos objectifs, je vous conseille sur le meilleur modèle d'IA à utiliser, et je développe l'intégration de A à Z dans votre application Laravel.",
+  ia_card_title: "Projet sur Mesure",
+  ia_card_price: "Sur Devis",
+  ia_card_feature1: "Conseil sur le choix du modèle d'IA",
+  ia_card_feature2: "Développement de l'intégration API",
+  ia_card_feature3: "Optimisation des prompts",
+  ia_card_feature4: "Code testé et documenté",
+  ia_card_button: "Obtenir un devis",
+
+  // dictionaries/fr.js
+// ... (code précédent)
+  // Page À Propos
+  about_title: "Mon Histoire : De l'Obstacle à l'Expertise",
+  about_subtitle: "Découvrez le parcours qui m'a forgé en développeur Laravel et expert en résolution de problèmes complexes.",
+  about_h2_1: "Les Premiers Pas : Un Projet Ambitieux et un Obstacle Inattendu",
+  about_p1_1: "Mon aventure dans le développement web a commencé avec un projet ambitieux : la création d'un site de paris sportifs. L'idée était de permettre aux utilisateurs de tester leurs pronostics avec des jetons virtuels, une sorte d'API de paris pour l'entraînement. Le concept était clair, l'enthousiasme au rendez-vous.",
+  about_p1_2: "Cependant, très vite, je me suis heurté à un mur technique qui allait marquer un tournant décisif dans mon apprentissage : l'erreur de <strong>CSRF token mismatch</strong>. Ce problème, lié à la sécurité des formulaires web, était à l'époque un véritable casse-tête pour moi. Il bloquait toute interaction, rendant le site inutilisable. C'était un os sur lequel je suis tombé, et qui m'a forcé à revoir mes connaissances fondamentales en <strong>sécurité web</strong>.",
+  about_h2_2: "Laravel : La Révélation et les Défis Quotidiens",
+  about_p2_1: "Face à cette difficulté, j'ai décidé de plonger dans l'univers de <strong>Laravel</strong>. Ce framework PHP, réputé pour son élégance et sa robustesse, est devenu mon principal outil. J'ai appris à l'utiliser pour construire des <strong>APIs de paris</strong> solides, où les utilisateurs reçoivent automatiquement 1000 jetons à l'inscription pour tester leurs stratégies de pronostics. L'API fonctionne aujourd'hui parfaitement, ne manquant plus que sa mise en ligne.",
+  about_p2_2: "Mon parcours avec Laravel n'a pas été un long fleuve tranquille. J'ai abandonné et relancé le projet à plusieurs reprises, confronté à une multitude de défis : un simple caractère <code>#</code> dans un fichier <code>.env</code> qui bloque une donnée car il est considéré comme un commentaire, une fonction non fermée provoquant des erreurs de parsing, ou encore des problèmes de configuration serveur. Chaque problème était un nouvel apprentissage.",
+  about_h2_3: "La Persévérance : Clé de la Résolution Technique",
+  about_p3_1: "Ce que j'ai appris de ces expériences, c'est que la <strong>persévérance</strong> et une lecture approfondie de la documentation sont les clés de la <strong>résolution de problèmes techniques</strong>. Chaque obstacle, même le plus frustrant comme l'erreur de CSRF token, est une opportunité de comprendre en profondeur les mécanismes du développement web et de l'<strong>ingénierie logicielle</strong>.",
+  about_p3_2: "Aujourd'hui, ces défis passés sont devenus mes forces. Je suis capable d'anticiper les problèmes, de diagnostiquer rapidement les erreurs et de mettre en place des solutions robustes et durables. Mon expérience avec Laravel et les APIs, forgée dans la résolution de problèmes concrets, est ce que je mets au service de mes clients.",
+  about_h2_4: "Prêt à Transformer Vos Défis en Succès ?",
+  about_p4_1: "Si vous aussi, vous rencontrez des obstacles techniques, ou si vous avez un projet ambitieux qui nécessite une expertise solide en Laravel et en développement d'API, n'hésitez pas à me contacter. Mon parcours est la preuve que chaque problème a sa solution.",
+  about_cta_button: "Discutons de votre projet",
+
+  // dictionaries/fr.js
+// ... (code précédent)
+  // Page Contact
+  contact_page_title: "Parlons de votre projet",
+  contact_page_subtitle: "Que vous ayez une idée claire, un projet existant à améliorer, ou simplement une question, je suis là pour vous aider à trouver la meilleure solution technique.",
+  contact_reason_title: "Pourquoi me contacter ?",
+  contact_reason1_title: "Démarrer un nouveau projet",
+  contact_reason1_desc: "Vous avez une idée d'application ou de SaaS ? Discutons-en pour définir un plan d'action et un devis précis.",
+  contact_reason2_title: "Audit & Coaching",
+  contact_reason2_desc: "Votre application Laravel est lente ou vous êtes bloqué ? Une session de coaching ou un audit peut débloquer la situation rapidement.",
+  contact_reason3_title: "Une simple question",
+  contact_reason3_desc: "Pas de projet immédiat mais une question technique ? N'hésitez pas, je réponds à tout le monde.",
+  contact_direct_title: "Contact Direct",
+  contact_direct_whatsapp: "Disponible sur WhatsApp",
+  contact_form_title: "Envoyez-moi un message",
+  contact_form_name_label: "Nom",
+  contact_form_email_label: "Email",
+  contact_form_message_label: "Votre Message",
+  contact_form_button: "Envoyer",
+  contact_form_status_sending: "Envoi en cours...",
+  contact_form_status_success: "Merci ! Votre message a bien été envoyé.",
+  contact_form_status_error_default: "Oups! Une erreur est survenue.",
+// dictionaries/fr.js
+// ... (code précédent)
+  // Page Liste Études de Cas
+  case_studies_title: "Études de Cas",
+  case_studies_subtitle: "Découvrez comment j'ai résolu des problèmes concrets pour mes clients.",
+  case_studies_link: "Voir le cas d'étude →",
+
+  // dictionaries/fr.js
+// ... (code précédent)
+  // Page Détail Étude de Cas
+  case_study_problem: "Problème",
+  case_study_solution: "Solution",
+  case_study_result: "Résultat",
+
+  // dictionaries/fr.js
+// ... (code précédent)
+  // Page FAQ
+  faq_title: "Foire Aux Questions (FAQ)",
+  faq_subtitle: "Retrouvez ici les réponses aux questions les plus fréquentes concernant mes services et mon approche.",
+  faq_q1: "Quels types de projets Laravel prenez-vous en charge ?",
+  faq_a1: "Je prends en charge une large gamme de projets Laravel, de la création d'APIs robustes à l'optimisation de performances, en passant par la refactorisation de code existant et l'intégration de nouvelles fonctionnalités. Que ce soit pour un SaaS, une application web complexe ou un outil interne, je peux vous accompagner.",
+  faq_q2: "Comment se déroule une session de coaching ?",
+  faq_a2: "Une session de coaching dure 1 heure et se déroule en visio. Vous partagez votre écran et nous travaillons ensemble sur votre problème spécifique (bug, architecture, optimisation, etc.). L'objectif est de vous débloquer rapidement et de vous transmettre des connaissances pratiques.",
+  faq_q3: "Intégrez-vous toutes les APIs d'IA (ChatGPT, Mistral, Gemini...) ?",
+  faq_a3: "Oui, je suis spécialisé dans l'intégration de diverses APIs d'IA, y compris celles de ChatGPT (OpenAI), Mistral AI, Google Gemini, et d'autres modèles pertinents. Le choix de l'API dépendra de vos besoins spécifiques, de votre budget et des fonctionnalités souhaitées.",
+  faq_q4: "Quel est votre processus de travail pour un nouveau projet ?",
+  faq_a4: "Mon processus commence par une discussion approfondie de vos besoins pour bien comprendre votre vision. Ensuite, je propose un plan d'action détaillé et un devis. Une fois validé, nous travaillons en étroite collaboration, avec des points réguliers, jusqu'à la livraison du projet. La transparence et la communication sont clés.",
+  faq_q5: "Proposez-vous un support après la livraison d'un projet ?",
+  faq_a5: "Oui, je propose un support post-livraison pour m'assurer que tout fonctionne parfaitement et pour répondre à vos éventuelles questions. Les modalités de support sont définies au début du projet pour une clarté totale.",
+  faq_q6: "Comment puis-je obtenir un devis pour mon projet ?",
+  faq_a6: "Pour obtenir un devis, le plus simple est de me contacter via le formulaire sur la page de contact, ou directement par email/téléphone. Décrivez-moi votre projet et vos besoins, et je reviendrai vers vous rapidement avec une proposition adaptée.",
+// dictionaries/fr.js
+// ... (code précédent)
+  // Page Liste Blog
+  blog_title: "Le Blog",
+  blog_subtitle: "Tutoriels et réflexions sur Laravel, l'IA et le développement web.",
+  sidebar_categories_title: "Catégories",
+  // dictionaries/fr.js
+// ... (code précédent)
+  // Page Catégorie Blog
+  category_page_tagline: "Catégorie",
+blog_no_articles_found: "Aucun article n'a été trouvé pour cette catégorie.",
+
+view_live_demo_button: "Voir la démo en direct",
+};
