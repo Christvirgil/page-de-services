@@ -1,5 +1,6 @@
 ---
 title: "Rescuing a Slow Laravel App: Response Time Reduced by 90%"
+slug: "rescuing-a-slow-laravel-app" # <-- ASSURE-TOI QUE CE SLUG CORRESPOND BIEN AU NOM DE FICHIER (sans .mdx)
 slug_fr: "sauvetage-app-laravel-lente"
 date: '2025-07-29'
 client: "Project Management SaaS"
@@ -47,18 +48,18 @@ The solution was to implement Laravel's **Eager Loading**. By changing just one 
 ```php
 $projects = Project::all(); // 1 query
 // Loop with $project->client->name and $project->tasks->count() -> N+N queries
+```
 
-After:
-Generated php
+**After:**
+```php
 $projects = Project::with('client', 'tasks')->get(); // 3 queries!
+```
 
-2. Adding Strategic Indexes
+### 2. Adding Strategic Indexes
 The second issue stemmed from searching. The tasks table contained hundreds of thousands of entries, but the user_id column was not indexed. Every time a user wanted to view their tasks, the database had to scan the entire table.
 By adding a simple index to this column, search queries became almost instantaneous.
-Generated sql
+
 CREATE INDEX idx_tasks_user_id ON tasks (user_id);
-Use code with caution.
-SQL
 The Results: A Transformed Application
 <ul>
 <li><strong>Average loading time for critical pages reduced from 5 seconds to under 500 milliseconds.</strong> (A 90% improvement).</li>
