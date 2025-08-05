@@ -1,8 +1,8 @@
-// Fichier: app/[lang]/blog/categorie/[category]/page.tsx (Version Finale Complète)
+// Fichier: app/[lang]/blog/categorie/[category]/page.tsx (Version Finalisée et Corrigée)
 
 import Header from '@/components/Header';
 import PostCard from '@/components/PostCard';
-import { getPosts, getAllCategories } from '@/lib/posts';
+import { getPosts, getAllCategories } from '@/lib/posts'; // getAllCategories est utilisé pour generateStaticParams
 import { fr } from '../../../../../dictionaries/fr.js';
 import { en } from '../../../../../dictionaries/en.js';
 
@@ -13,6 +13,8 @@ const getDictionary = (lang: 'fr' | 'en') => {
 
 // Génère les pages statiques pour chaque combinaison de langue/catégorie
 export async function generateStaticParams() {
+  // Cette fonction est censée retourner un tableau d'objets { lang: 'fr', category: 'développement' }
+  // Assure-toi que getAllCategories() dans '@/lib/posts' le fait correctement.
   return getAllCategories();
 }
 
@@ -24,8 +26,10 @@ export default function CategoryPage({ params }: { params: { category: string, l
   // On récupère les articles de la bonne langue
   const allPosts = getPosts(lang);
 
-  const filteredPosts = allPosts.filter(post => post.frontmatter.category.toLowerCase() === category);
+  // Filtre les articles pour n'afficher que ceux de la catégorie actuelle
+  const filteredPosts = allPosts.filter(post => post.frontmatter.category.toLowerCase() === category.toLowerCase());
 
+  // Fonction pour capitaliser la première lettre de la catégorie pour l'affichage
   const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
   const categoryName = capitalize(category);
 
@@ -34,6 +38,7 @@ export default function CategoryPage({ params }: { params: { category: string, l
       <Header />
       <main className="max-w-7xl mx-auto py-12 px-4">
         <div className="text-center mb-16">
+          {/* J'ai gardé t.category_page_tagline car c'est ce que tu as dans ton code */}
           <p className="text-lg font-semibold text-cyan-400">{t.category_page_tagline}</p>
           <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-100 leading-tight mt-2">
             {categoryName}
@@ -47,7 +52,8 @@ export default function CategoryPage({ params }: { params: { category: string, l
             ))
           ) : (
             <p className="col-span-full text-center text-gray-500">
-              {t.category_page_no_posts}
+              {/* *** LA LIGNE CORRIGÉE : Utilisation de la clé de dictionnaire 'blog_no_articles_found' *** */}
+              {t.blog_no_articles_found}
             </p>
           )}
         </div>
